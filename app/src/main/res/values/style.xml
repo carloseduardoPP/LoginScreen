@@ -2,5 +2,10 @@
 <resources>
     <style name="title">
         <item name="android:textSize">20dp</item>
+        <item name="android:textColor">#d99f00</item>
+        <item name="android:backgroundColor">#3b2b01</item>
+    </style>
+    <style name="button">
+        <item name="android:button">#d99f00</item>
     </style>
 </resources>
