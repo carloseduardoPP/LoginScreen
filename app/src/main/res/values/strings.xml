@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MyLogin</string>
+    <string name="user">Login</string>
+    <string name="password">Senha</string>
+    <string name="login">Entrar</string>
+    <string name="instruction">Digite nos campos acima seu E-mail e sua Senha.</string>
+
+    <string name="rpsName">Nome:</string>
+    <string name="rpsAge">Idade:</string>
+    <string name="rpsEmail">Email:</string>
+</resources>
