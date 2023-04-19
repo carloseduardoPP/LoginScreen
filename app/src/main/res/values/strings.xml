@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">MyLogin</string>
-    <string name="user">Login</string>
+    <string name="user">Nome de Usuario</string>
     <string name="password">Senha</string>
     <string name="login">Entrar</string>
-    <string name="instruction">Digite nos campos acima seu E-mail e sua Senha.</string>
+    <string name="instruction">Digite nos campos acima seu Nome de Usuario e sua Senha.</string>
 
-    <string name="rpsName">Nome:</string>
-    <string name="rpsAge">Idade:</string>
-    <string name="rpsEmail">Email:</string>
+    <string name="rpsName">Nome: Carlos Eduardo</string>
+    <string name="rpsAge">Idade: 21</string>
+    <string name="rpsEmail">Email: carlos.eduardo@picpay.com</string>
 </resources>
