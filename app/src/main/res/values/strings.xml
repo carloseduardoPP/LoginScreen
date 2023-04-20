@@ -8,4 +8,10 @@
     <string name="rpsName">Nome:</string>
     <string name="rpsAge">Idade:</string>
     <string name="rpsEmail">Email:</string>
+    <string name="recomendacao_user">Preencha este campo com o seu nome de usuario!</string>
+    <string name="recomendacao_pass">Preencha este campo com a sua senha!</string>
+    <string name="invalid_user">Usuario inválido!</string>
+    <string name="nine_caracters">A senha precisa ter pelo menos 9 caracteres!</string>
+    <string name="ten_caracter">A senha deve ter menos que 10 caracteres!</string>
+    <string name="user_not_found">Usuario nao encontrado!</string>
 </resources>

@@ -1,13 +1,13 @@
 package com.example.mylogin
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import com.example.mylogin.databinding.ActitvityLoginBinding
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.snackbar.Snackbar.*
 
+
+const val PASSWORD_NUMBER = 9
 open class LoginActivity : AppCompatActivity() {
     lateinit var binding: ActitvityLoginBinding
 
@@ -26,10 +26,8 @@ open class LoginActivity : AppCompatActivity() {
         val idade: String = "21"
         val email: String = "carlos.eduardo@picpay.com"
 
-        //ERROR
-        val error = "Usuario nao encontrado"
-
-
+        val user1 = User("@carlos.eduardo", "picpay123", "Carlos Eduardo", "21",
+            "carlos.eduardo@picpay.com")
         //VALIDACAO
         btnLogin.setOnClickListener() {
             val user = etUser.text.toString()
@@ -37,38 +35,40 @@ open class LoginActivity : AppCompatActivity() {
 
             when {
                 user.isEmpty() -> {
-                    etUser.error = "Preencha este campo com o seu nome de usuario!"
+                    etUser.error = getString(R.string.recomendacao_user)
                 }
                 pass.isEmpty() -> {
-                    etPassword.error = "Preencha este campo com a sua senha!"
+                    etPassword.error = getString(R.string.recomendacao_pass)
                 }
                 !user.contains("@") -> {
                     val snackbar = make(
-                        it, "Usuario inválido!",
+                        it, getString(R.string.invalid_user),
                         LENGTH_SHORT
                     )
                     snackbar.show()
                 }
-                pass.length <= 8 -> {
+                pass.length < PASSWORD_NUMBER -> {
                     val snackbar = make(
-                        it, "A senha precisa ter pelo menos 9 caracteres!",
+                        it, getString(R.string.nine_caracters),
                         LENGTH_SHORT
                     )
                     snackbar.show()
                 }
-                pass.length > 9 -> {
+                pass.length > PASSWORD_NUMBER -> {
                     val snackbar = make(
-                        it, "A senha deve ter menos que 10 caracteres!",
+                        it, getString(R.string.ten_caracter),
                         LENGTH_SHORT
                     )
                     snackbar.show()
                 }
             }
+
             //PRINTAR NA TELA
             if (user == usuario && pass == senha) {
                 response.isVisible = true
                 message.isVisible = false
 
+                rpName.text = user1.nome
                 rpName.text = nome
                 rpAge.text = idade
                 rpEmail.text = email
@@ -76,7 +76,7 @@ open class LoginActivity : AppCompatActivity() {
                 message.isVisible = true
                 response.isVisible = false
 
-                tvMessage.text = "Usuario nao encontrado!"
+                tvMessage.text = getString(R.string.user_not_found)
             }
         }
     }
