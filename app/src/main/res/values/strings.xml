@@ -5,7 +5,7 @@
     <string name="login">Entrar</string>
     <string name="instruction">Digite nos campos acima seu Nome de Usuario e sua Senha.</string>
 
-    <string name="rpsName">Nome: Carlos Eduardo</string>
-    <string name="rpsAge">Idade: 21</string>
-    <string name="rpsEmail">Email: carlos.eduardo@picpay.com</string>
+    <string name="rpsName">Nome:</string>
+    <string name="rpsAge">Idade:</string>
+    <string name="rpsEmail">Email:</string>
 </resources>
