@@ -61,6 +61,7 @@ open class LoginActivity : AppCompatActivity() {
                     )
                     snackbar.show()
                 }
+
             }
 
             //PRINTAR NA TELA
