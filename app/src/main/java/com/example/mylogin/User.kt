@@ -5,5 +5,6 @@ data class User(
     val senha: String,
     val nome: String,
     val idade: String,
-    val email: String
+    val email: String,
+    val notFound: String = "Usuario nao encontrado"
 )

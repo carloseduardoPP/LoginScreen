@@ -3,7 +3,7 @@ package com.example.mylogin
 import androidx.lifecycle.ViewModel
 import com.example.mylogin.LoginConstants.NUMBER.PASSWORD_NUMBER
 
-@Suppress("UNREACHABLE_CODE")
+@Suppress("UNREACHABLE_CODE", "UNUSED_EXPRESSION")
 class LoginViewModel : ViewModel() {
 
     val userFixo = User(
@@ -19,7 +19,6 @@ class LoginViewModel : ViewModel() {
             user.startsWith("@").not() -> {
                 "Todo nome de usuario comeca com `@` se possivel, inserir o carecetere no inicio do nome."
             }
-
             else -> {
                 null
             }
@@ -28,18 +27,9 @@ class LoginViewModel : ViewModel() {
 
     fun visibility(user: String, pass: String): User? {
         return when {
-            user == userFixo.usuario && pass == userFixo.senha -> {
-                userFixo
-            }
-            else -> {
-                null
-            }
+            user == userFixo.usuario && pass == userFixo.senha -> userFixo
+            else -> userFixo
         }
-
-    }
-
-    fun test(): User {
-        return userFixo
     }
 
     fun validatePassword(pass: String): String? {
